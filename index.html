@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalondo Timothy, BSN, RN - Professional Nursing Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; background: #f8fafc; line-height: 1.7; }
+        a { text-decoration: none; color: #141D4F; transition: all 0.3s ease; }
+        a:hover { color: #E55368; }
+        ul { list-style: none; }
+        img { max-width: 100%; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        :root { --primary1: #E55368; --primary2: #141D4F; --light: #f8fafc; }
+        .btn { display: inline-block; padding: 14px 35px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; font-size: 0.95rem; }
+        .btn-primary { background: var(--primary1); color: #fff; }
+        .btn-primary:hover { background: #c43d52; transform: translateY(-3px); }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+        .btn-outline:hover { background: #fff; color: var(--primary2); transform: translateY(-3px); }
+        .btn-sm { padding: 8px 20px; font-size: 0.85rem; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title .subtitle { font-size: 0.85rem; color: var(--primary1); text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary2); margin-top: 5px; }
+        .section-title h2 span { color: var(--primary1); }
+        .section-title .line { width: 60px; height: 3px; background: var(--primary1); margin: 15px auto 0; }
+        .navbar { background: rgba(255,255,255,0.97); box-shadow: 0 2px 15px rgba(0,0,0,0.06); position: fixed; top:0; left:0; right:0; z-index:1000; padding:15px 0; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--primary2); }
+        .logo span { color: var(--primary1); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 600; font-size: 0.9rem; color: var(--primary2); }
+        .hero { min-height: 100vh; display: flex; align-items: center; color: #fff; padding: 140px 0 60px; position: relative; overflow: hidden; }
+        .hero-video { position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+        .hero-img-bg { position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+        .hero-fallback { position: absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(135deg, var(--primary2) 0%, #1a2a5c 100%); z-index:0; }
+        .hero::after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(10,20,40,0.65); z-index:1; }
+        .hero .container { position:relative; z-index:2; display:flex; align-items:center; gap:50px; }
+        .hero-content { flex:1; }
+        .hero-content .badge { display:inline-block; background:var(--primary1); color:#fff; padding:6px 22px; border-radius:50px; font-size:0.75rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:20px; }
+        .hero-content h1 { font-size:3.8rem; font-weight:700; margin-bottom:8px; line-height:1.1; }
+        .hero-content h1 span { color:var(--primary1); }
+        .hero-content .location { font-size:1.1rem; color:rgba(255,255,255,0.7); margin-bottom:20px; }
+        .hero-content p { font-size:1.15rem; max-width:550px; color:rgba(255,255,255,0.85); margin-bottom:30px; line-height:1.8; }
+        .hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
+        .hero-image { flex:1; text-align:center; }
+        .hero-image img { width:350px; height:350px; object-fit:cover; border-radius:50%; border:5px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.3s ease; }
+        .hero-image img:hover { transform:scale(1.02); }
+        .about { padding:100px 0; background:#fff; }
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+        .about-image img { width:100%; max-width:450px; border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.06); }
+        .about-text h3 { font-size:2rem; color:var(--primary2); margin-bottom:15px; }
+        .services { padding:100px 0; background:var(--light); }
+        .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; }
+        .service-card { background:#fff; padding:40px 30px; border-radius:15px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.03); }
+        .service-card i { font-size:2.8rem; color:var(--primary1); margin-bottom:18px; }
+        .experience { padding:100px 0; background:#fff; }
+        .timeline { position:relative; padding-left:35px; border-left:3px solid var(--primary1); max-width:800px; margin:0 auto; }
+        .timeline-item { margin-bottom:45px; position:relative; }
+        .timeline-item::before { content:''; width:16px; height:16px; background:var(--primary1); border-radius:50%; position:absolute; left:-42px; top:5px; border:3px solid #fff; }
+        .testimonials { padding:100px 0; background:var(--primary2); color:#fff; position:relative; overflow:hidden; }
+        .testimonials::before { content:''; position:absolute; top:-200px; right:-200px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(229,83,104,0.15), transparent 70%); pointer-events:none; }
+        .testimonials::after { content:''; position:absolute; bottom:-200px; left:-200px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(245,158,11,0.1), transparent 70%); pointer-events:none; }
+        .contact { padding:100px 0; background:#fff; }
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+        .contact-form input, .contact-form textarea, .contact-form select { width:100%; padding:15px 20px; border:1px solid #ddd; border-radius:10px; margin-bottom:18px; font-family:inherit; font-size:1rem; background:var(--light); }
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline:2px solid var(--primary1); border-color:var(--primary1); }
+        .contact-form select { appearance: auto; }
+        .footer { background:var(--primary2); color:rgba(255,255,255,0.5); padding:50px 0 30px; text-align:center; }
+        #formStatus { margin-top:15px; padding:10px; border-radius:8px; font-weight:600; display:none; }
+        #emailError { color: #ef4444; font-size: 0.85rem; display: none; margin-top: -10px; margin-bottom: 10px; }
+        .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        /* Testimonial Form Styles */
+        .testimonial-form-container { background:rgba(255,255,255,0.08); padding:30px; border-radius:15px; margin-top:30px; border:1px solid rgba(255,255,255,0.05); }
+        .testimonial-form-container h3 { color:#fff; margin-bottom:20px; font-size:1.2rem; }
+        .testimonial-form-container input, .testimonial-form-container textarea, .testimonial-form-container select { width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; margin-bottom:15px; font-family:inherit; font-size:0.95rem; background:rgba(255,255,255,0.05); color:#fff; }
+        .testimonial-form-container input::placeholder, .testimonial-form-container textarea::placeholder { color:rgba(255,255,255,0.5); }
+        .testimonial-form-container input:focus, .testimonial-form-container textarea:focus, .testimonial-form-container select:focus { outline:2px solid var(--primary1); border-color:var(--primary1); }
+        .testimonial-form-container select option { color:#1a1a1a; }
+        .testimonial-form-container .btn { width:100%; justify-content:center; }
+        #testimonialStatus { margin-top:15px; padding:10px; border-radius:8px; font-weight:600; display:none; }
+        
+        /* Glassmorphism Testimonial Cards */
+        #publishedTestimonials { display:grid; grid-template-columns:repeat(3, 1fr); gap:25px; }
+        #publishedTestimonials .testimonial-item { background:rgba(255,255,255,0.12); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); padding:24px 26px; border-radius:24px; border:1px solid rgba(255,255,255,0.18); box-shadow:0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.2); transition:all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); animation:floatGlass 5s ease-in-out infinite; position:relative; overflow:hidden; }
+        #publishedTestimonials .testimonial-item::before { content:''; position:absolute; top:0; left:-100%; width:200%; height:100%; background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%, transparent 100%); animation:shimmerGlass 8s ease-in-out infinite; pointer-events:none; }
+        #publishedTestimonials .testimonial-item::after { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05), transparent 60%); pointer-events:none; }
+        #publishedTestimonials .testimonial-item:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 16px 48px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3), 0 0 40px rgba(229,83,104,0.08); background:rgba(255,255,255,0.18); border-color:rgba(255,255,255,0.3); }
+        #publishedTestimonials .testimonial-item .stars { color:#f59e0b; font-size:1.1rem; margin-bottom:10px; letter-spacing:3px; position:relative; z-index:1; }
+        #publishedTestimonials .testimonial-item .content { color:rgba(255,255,255,0.92); font-style:italic; font-size:0.98rem; margin:10px 0 14px 0; line-height:1.7; position:relative; z-index:1; font-weight:300; letter-spacing:0.3px; }
+        #publishedTestimonials .testimonial-item .content::before { content:'"'; font-size:2.5rem; color:rgba(229,83,104,0.3); position:absolute; top:-15px; left:-8px; font-family:Georgia, serif; z-index:-1; }
+        #publishedTestimonials .testimonial-item .name { color:#E55368; font-weight:700; font-size:1rem; position:relative; z-index:1; letter-spacing:0.5px; }
+        #publishedTestimonials .testimonial-item .role { color:rgba(255,255,255,0.45); font-size:0.8rem; position:relative; z-index:1; font-weight:300; }
+        #publishedTestimonials .testimonial-item .date { color:rgba(255,255,255,0.25); font-size:0.6rem; margin-top:6px; position:relative; z-index:1; text-transform:uppercase; letter-spacing:1px; }
+        #publishedTestimonials .testimonial-item .glass-glow { position:absolute; top:-1px; left:-1px; right:-1px; bottom:-1px; border-radius:24px; background:linear-gradient(135deg, rgba(229,83,104,0.2), rgba(245,158,11,0.15), rgba(229,83,104,0.2)); opacity:0; transition:opacity 0.5s ease; z-index:0; pointer-events:none; }
+        #publishedTestimonials .testimonial-item:hover .glass-glow { opacity:1; }
+        @keyframes floatGlass { 0%,100%{transform:translateY(0px);} 50%{transform:translateY(-8px);} }
+        @keyframes shimmerGlass { 0%,100%{transform:translateX(-100%);} 50%{transform:translateX(100%);} }
+        #publishedTestimonials .testimonial-item:nth-child(1){animation-delay:0s;}
+        #publishedTestimonials .testimonial-item:nth-child(2){animation-delay:0.4s;}
+        #publishedTestimonials .testimonial-item:nth-child(3){animation-delay:0.8s;}
+        #publishedTestimonials .testimonial-item:nth-child(4){animation-delay:0.2s;}
+        #publishedTestimonials .testimonial-item:nth-child(5){animation-delay:0.6s;}
+        #publishedTestimonials .testimonial-item:nth-child(6){animation-delay:1.0s;}
+
+        /* ADMIN PANEL STYLES - FULL SCREEN */
+        .admin-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(12px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .admin-overlay.show { display: flex; }
+        .admin-panel {
+            background: #fff;
+            max-width: 1100px;
+            width: 100%;
+            max-height: 95vh;
+            overflow-y: auto;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .admin-panel .close-btn {
+            position: sticky;
+            top: 0;
+            float: right;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            background: none;
+            border: none;
+            transition: 0.3s;
+            z-index: 10;
+        }
+        .admin-panel .close-btn:hover { color: #ef4444; transform: rotate(90deg); }
+        
+        /* Admin Header with Live Button */
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 15px;
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .admin-header h2 {
+            color: #141D4F;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+        .admin-header .live-btn {
+            background: #141D4F;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .admin-header .live-btn:hover {
+            background: #e55368;
+            transform: scale(1.05);
+        }
+        
+        .admin-panel .auth-overlay {
+            position: relative;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            z-index: 1;
+        }
+        .admin-panel .auth-overlay::before { display: none; }
+        .admin-panel .auth-card {
+            background: transparent;
+            box-shadow: none;
+            padding: 20px;
+            max-width: 100%;
+        }
+        .admin-panel .auth-card::before { display: none; }
+        .admin-panel .auth-icon { width: 60px; height: 60px; margin: 0 auto 10px; }
+        .admin-panel .auth-icon i { font-size: 2rem; }
+        .admin-panel .auth-card input { background: #f1f3f5; }
+        .admin-panel .auth-card .btn { background: linear-gradient(135deg, #e55368, #c43d52); }
+        .admin-panel .auth-card .btn:hover { box-shadow: 0 8px 25px rgba(229,83,104,0.25); }
+        
+        .admin-panel .admin-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        .admin-panel .admin-tabs button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            background: #f1f3f5;
+            color: #6c757d;
+            transition: 0.3s;
+        }
+        .admin-panel .admin-tabs button.active { background: #e55368; color: #fff; }
+        .admin-panel .admin-tabs button:hover { transform: scale(1.05); }
+        .admin-panel .admin-tab { display: none; animation: fadeIn 0.3s ease; }
+        .admin-panel .admin-tab.active { display: block; }
+        .admin-panel .admin-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #e9ecef;
+        }
+        .admin-panel .admin-card h4 { color: #141D4F; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .admin-panel .admin-card .field { margin-bottom: 12px; }
+        .admin-panel .admin-card .field label { display: block; font-size: 0.8rem; font-weight: 600; color: #6c757d; margin-bottom: 3px; }
+        .admin-panel .admin-card .field input, .admin-panel .admin-card .field textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: #fff;
+        }
+        .admin-panel .admin-card .field textarea { min-height: 60px; resize: vertical; }
+        .admin-panel .admin-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .admin-panel .admin-list-item {
+            background: #fff;
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            border-left: 4px solid #e55368;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .admin-panel .admin-list-item .info { flex: 1; }
+        .admin-panel .admin-list-item .info .name { font-weight: 600; color: #0b0f19; }
+        .admin-panel .admin-list-item .info .content { color: #4a4a4a; font-style: italic; font-size: 0.85rem; }
+        .admin-panel .admin-list-item .info .meta { color: #6c757d; font-size: 0.7rem; }
+        .admin-panel .admin-list-item .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+        .admin-panel .admin-list-item .actions button { padding: 4px 12px; border: none; border-radius: 20px; cursor: pointer; font-size: 0.7rem; font-weight: 600; transition: 0.3s; }
+        .admin-panel .admin-list-item .actions .approve { background: #22c55e; color: #fff; }
+        .admin-panel .admin-list-item .actions .approve:hover { background: #16a34a; }
+        .admin-panel .admin-list-item .actions .deny { background: #ef4444; color: #fff; }
+        .admin-panel .admin-list-item .actions .deny:hover { background: #dc2626; }
+        .admin-panel .admin-list-item .actions .delete { background: #6c757d; color: #fff; }
+        .admin-panel .admin-list-item .actions .delete:hover { background: #5a6268; }
+        .admin-panel .admin-list-item .badge-status { display: inline-block; padding: 2px 12px; border-radius: 20px; font-size: 0.65rem; font-weight: 600; }
+        .admin-panel .admin-list-item .badge-pending { background: #fbbf24; color: #000; }
+        .admin-panel .admin-list-item .badge-approved { background: #22c55e; color: #fff; }
+        .admin-panel .save-btn {
+            background: #e55368;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .admin-panel .save-btn:hover { background: #c43d52; transform: scale(1.03); }
+        .admin-panel .status-msg { margin-top: 10px; padding: 8px 12px; border-radius: 8px; display: none; font-weight: 600; }
+        .admin-panel .status-msg.success { display: block; color: #22c55e; background: #dcfce7; }
+        .admin-panel .status-msg.error { display: block; color: #ef4444; background: #fee2e2; }
+        .admin-panel .info-box { background: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #22c55e; margin-bottom: 15px; }
+
+        /* MEDIA PICKER MODAL */
+        #mediaPickerModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+        #mediaPickerModal.show { display: flex; }
+        #mediaPickerModal .modal-content {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 24px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+        }
+        #mediaPickerModal .modal-content .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        #mediaPickerModal .modal-content .modal-header h3 { color: #0b0f19; }
+        #mediaPickerModal .modal-content .modal-header button {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #999;
+        }
+        #mediaPickerModal .media-select-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 12px;
+            overflow-y: auto;
+            flex: 1;
+            padding: 4px;
+        }
+        #mediaPickerModal .media-select-item {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+            background: white;
+        }
+        #mediaPickerModal .media-select-item:hover { border-color: #e55368; transform: scale(1.03); }
+        #mediaPickerModal .media-select-item img,
+        #mediaPickerModal .media-select-item video {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        #mediaPickerModal .media-select-item .name {
+            font-size: 0.6rem;
+            color: #6c757d;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .image-preview-box {
+            margin-top: 10px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-preview-box img { max-width: 100%; max-height: 150px; border-radius: 8px; }
+        .image-preview-box .no-image { color: #adb5bd; font-size: 0.85rem; }
+
+        @media (max-width: 992px) {
+            #publishedTestimonials { grid-template-columns: repeat(2, 1fr); }
+            .hero .container, .about-grid, .contact-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-image img { width: 250px; height: 250px; }
+            .nav-links { display: none; }
+            .form-grid-2 { grid-template-columns: 1fr; }
+            .admin-panel .admin-grid-2 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            #publishedTestimonials { grid-template-columns: 1fr; }
+            .admin-panel { padding: 20px; }
+            #mediaPickerModal .modal-content { padding: 16px; }
+            .admin-header { flex-direction: column; align-items: stretch; }
+            .admin-header .live-btn { justify-content: center; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.05);opacity:0.6;} }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo"><span id="logoText1">Kalondo</span> <span id="logoText2">Timothy</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Specialties</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-fallback"></div>
+    <div id="heroBackground"></div>
+    <div class="container">
+        <div class="hero-content">
+            <span class="badge" id="heroBadge">BSN, RN</span>
+            <h1><span id="heroFirstName">Kalondo</span> <span id="heroLastName">Timothy</span></h1>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> <span id="heroLocation">Dallas-Fort Worth, Texas</span></div>
+            <p id="heroBio">Recent graduate Registered Nurse (2024) with a Bachelor of Science in Nursing. Dedicated to providing compassionate, evidence-based care to patients and families across Texas.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#experience" class="btn btn-outline">View Experience</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img id="heroProfileImg" alt="Profile Image" title="Tap 5 times for admin access">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-title"><span class="subtitle">About Me</span><h2><span id="aboutTitleName">Kalondo Timothy, BSN, RN</span></h2><div class="line"></div></div>
+        <div class="about-grid">
+            <div class="about-image"><img id="aboutImg" alt="About Image"></div>
+            <div class="about-text">
+                <h3 id="aboutHeading">Dedicated to Compassionate Care</h3>
+                <p id="aboutPara1">Kalondo Timothy is a recent graduate (2024) Registered Nurse with a Bachelor of Science in Nursing from the University of Texas at Arlington. Based in the Dallas-Fort Worth metroplex, he is proud to serve the diverse communities of Texas with excellence and empathy.</p>
+                <p id="aboutPara2">During clinical rotations across medical-surgical, emergency, and critical care units, Kalondo developed strong clinical assessment skills and the ability to remain calm under pressure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-title"><span class="subtitle">Areas of Expertise</span><h2>Clinical <span>Specialties</span></h2><div class="line"></div></div>
+        <div class="services-grid" id="servicesContainer">
+            <div class="service-card"><i class="fas fa-heartbeat"></i><h3>Medical-Surgical Nursing</h3><p>Comprehensive adult care, post-operative monitoring, wound management, and medication administration in fast-paced hospital units.</p></div>
+            <div class="service-card"><i class="fas fa-brain"></i><h3>Neuroscience & Acute Care</h3><p>Specialized patient assessment, neurological checks, vital signs monitoring, and rapid intervention for acute patient needs.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience" id="experience">
+    <div class="container">
+        <div class="section-title"><span class="subtitle">Background & Clinical Training</span><h2>Education & <span>Experience</span></h2><div class="line"></div></div>
+        <div class="timeline" id="timelineContainer">
+            <div class="timeline-item"><span class="date">2024 - Present</span><h3>Registered Nurse (BSN, RN)</h3><p>Delivering patient-centered nursing care, executing treatment plans, and coordinating with interdisciplinary teams.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title"><span class="subtitle">Endorsements</span><h2><span>What People Say</span></h2><div class="line"></div></div>
+        <div style="display:flex; justify-content:flex-end; margin-bottom:20px;">
+            <button onclick="toggleForm()" id="toggleFormBtn" style="background:#E55368; color:#fff; border:none; padding:10px 25px; border-radius:30px; cursor:pointer; font-weight:600; font-size:0.9rem;">+ Add Testimonial</button>
+        </div>
+        <div style="display:grid; grid-template-columns:2fr 1fr; gap:30px; align-items:start;">
+            <div id="publishedTestimonials" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:25px; min-height:50px;"></div>
+            <div id="testimonialFormContainer" style="background:rgba(255,255,255,0.1); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); padding:25px; border-radius:16px; border:1px solid rgba(255,255,255,0.15); box-shadow:0 8px 32px rgba(0,0,0,0.1); display:none;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 style="color:#fff; margin:0; font-size:1.1rem;">Share Your Experience</h3>
+                    <button onclick="toggleForm()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:rgba(255,255,255,0.6);">&times;</button>
+                </div>
+                <form id="testimonialForm">
+                    <input type="text" id="testimonialName" placeholder="Your Full Name" required style="width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; font-size:0.95rem; margin-bottom:12px; background:rgba(255,255,255,0.08); color:#fff;">
+                    <input type="email" id="testimonialEmail" placeholder="Your Email" required style="width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; font-size:0.95rem; margin-bottom:12px; background:rgba(255,255,255,0.08); color:#fff;">
+                    <input type="text" id="testimonialRole" placeholder="Your Role (e.g., Patient, Colleague)" style="width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; font-size:0.95rem; margin-bottom:12px; background:rgba(255,255,255,0.08); color:#fff;">
+                    <select id="testimonialRating" style="width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; font-size:0.95rem; margin-bottom:12px; background:rgba(255,255,255,0.08); color:#fff;">
+                        <option value="" selected disabled style="color:#1a1a1a;">-- Select Rating --</option>
+                        <option value="5" style="color:#1a1a1a;">⭐⭐⭐⭐⭐ Excellent</option>
+                        <option value="4" style="color:#1a1a1a;">⭐⭐⭐⭐ Good</option>
+                        <option value="3" style="color:#1a1a1a;">⭐⭐⭐ Average</option>
+                        <option value="2" style="color:#1a1a1a;">⭐⭐ Fair</option>
+                        <option value="1" style="color:#1a1a1a;">⭐ Poor</option>
+                    </select>
+                    <textarea id="testimonialMessage" placeholder="Your message..." rows="3" required style="width:100%; padding:12px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:10px; font-size:0.95rem; resize:vertical; font-family:inherit; margin-bottom:12px; background:rgba(255,255,255,0.08); color:#fff;"></textarea>
+                    <button type="submit" class="btn btn-primary" id="testimonialBtn" style="width:100%; padding:12px; background:linear-gradient(135deg, #E55368, #c43d52);">Submit</button>
+                    <div id="testimonialStatus" style="margin-top:10px; display:none; padding:8px; border-radius:6px; font-weight:600; font-size:0.85rem;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title"><span class="subtitle">Get In Touch</span><h2>Contact <span>Information</span></h2><div class="line"></div></div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p><i class="fas fa-envelope"></i> <span id="contactEmail">muwanguziibra09@gmail.com</span></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="contactLocation">Dallas-Fort Worth, Texas, USA</span></p>
+                <hr style="margin:20px 0; border-color:#ddd;">
+                <p style="font-size:0.9rem; color:#666;"><i class="fas fa-clock"></i> Response within 24 hours</p>
+                <p style="font-size:0.9rem; color:#666;"><i class="fas fa-shield-alt"></i> All information is confidential</p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <h3 style="color:#141D4F; margin-bottom:15px;">Patient Information</h3>
+                <div class="form-grid-2">
+                    <input type="text" id="userName" placeholder="Full Name *" required>
+                    <input type="email" id="userEmail" placeholder="Email Address *" required>
+                </div>
+                <div id="emailError">⚠️ Please enter a valid email address</div>
+                <div class="form-grid-2">
+                    <input type="tel" id="userPhone" placeholder="Phone Number (Optional)">
+                    <select id="userGender"><option value="">Select Gender</option><option value="Male">Male</option><option value="Female">Female</option><option value="Non-binary">Non-binary</option><option value="Prefer not to say">Prefer not to say</option></select>
+                </div>
+                <input type="text" id="userAddress" placeholder="Address (Optional)">
+                <select id="userReason"><option value="">Reason for Contact</option><option value="General Consultation">General Consultation</option><option value="Symptom Evaluation">Symptom Evaluation</option><option value="Follow-up">Follow-up</option><option value="Medication Question">Medication Question</option><option value="Test Results">Test Results</option><option value="Referral">Referral</option><option value="Other">Other</option></select>
+                <div class="form-grid-2">
+                    <select id="userPreferredContact"><option value="Email">📧 Email (Default)</option><option value="Phone">📱 Phone</option><option value="WhatsApp">💬 WhatsApp</option><option value="Other">✏️ Other</option></select>
+                    <input type="text" id="userOtherContact" placeholder="If Other, specify here..." style="display:none;">
+                </div>
+                <textarea id="userMessage" placeholder="Your Message..." rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary" id="sendBtn" style="width:100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                <div id="formStatus"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container"><p>&copy; 2026 <span id="footerText">Kalondo Timothy, BSN, RN. All Rights Reserved.</span></p></div>
+</footer>
+
+<!-- ADMIN OVERLAY -->
+<div class="admin-overlay" id="adminOverlay">
+    <div class="admin-panel" id="adminPanel">
+        <button class="close-btn" onclick="closeAdmin()">&times;</button>
+        
+        <!-- Login Screen -->
+        <div id="adminLogin" class="auth-overlay" style="position:relative; background:transparent; padding:0; z-index:1; display:flex;">
+            <div class="auth-card" style="background:transparent; box-shadow:none; padding:20px; max-width:100%;">
+                <div class="auth-icon"><i class="fas fa-user-md"></i></div>
+                <h2 style="color:#0b0f19;">Admin Login</h2>
+                <p class="subtitle" style="color:#6c757d;">Nursing portfolio · secure access</p>
+                <div id="adminLoginError" class="error" style="display:none;">Invalid password</div>
+                <input type="password" id="adminPassword" placeholder="Enter admin password" onkeypress="if(event.key==='Enter') adminLogin()" style="width:100%; padding:14px 16px; background:#f1f3f5; border:2px solid #e9ecef; border-radius:14px; margin-bottom:14px; font-size:0.95rem;">
+                <button class="btn" onclick="adminLogin()" style="width:100%; padding:14px; border-radius:14px; font-weight:600; background:linear-gradient(135deg, #e55368, #c43d52); color:white; border:none; box-shadow:0 8px 28px rgba(229,83,104,0.3); cursor:pointer; transition:0.3s;">Unlock <i class="fas fa-arrow-right"></i></button>
+                <div class="auth-footer" style="display:flex; justify-content:center; gap:8px; margin:18px 0 8px;">
+                    <span class="dot1" style="width:8px; height:8px; border-radius:50%; background:#e55368; animation:pulse 2s infinite;"></span>
+                    <span class="dot2" style="width:8px; height:8px; border-radius:50%; background:#f59e0b; animation:pulse 2s infinite; animation-delay:0.3s;"></span>
+                    <span class="dot3" style="width:8px; height:8px; border-radius:50%; background:#22c55e; animation:pulse 2s infinite; animation-delay:0.6s;"></span>
+                </div>
+                <p class="auth-copy" style="color:rgba(255,255,255,0.5); font-size:0.7rem; margin-top:12px; letter-spacing:1px; text-align:center;">Kalondo Timothy, BSN, RN © 2026</p>
+            </div>
+        </div>
+        
+        <!-- Dashboard -->
+        <div id="adminDashboard" style="display:none;">
+            <div class="admin-header">
+                <h2><i class="fas fa-shield-halved" style="color:#e55368;"></i> Admin Panel</h2>
+                <a href="#" onclick="window.location.reload();" class="live-btn"><i class="fas fa-arrow-up-right-from-square"></i> View Live</a>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="active" onclick="switchAdminTab('content', this)"><i class="fas fa-file-pen"></i> Content</button>
+                <button onclick="switchAdminTab('email', this)"><i class="fas fa-envelope"></i> Email</button>
+                <button onclick="switchAdminTab('testimonials', this)"><i class="fas fa-star"></i> Testimonials</button>
+                <button onclick="switchAdminTab('mediaLibrary', this)"><i class="fas fa-images"></i> Media</button>
+                <button onclick="switchAdminTab('security', this)"><i class="fas fa-key"></i> Security</button>
+                <button onclick="switchAdminTab('help', this)"><i class="fas fa-question-circle"></i> Help</button>
+            </div>
+            
+            <!-- Content Tab -->
+            <div class="admin-tab active" id="tab-content">
+                <div class="admin-card">
+                    <h4><i class="fas fa-user"></i> Hero Section</h4>
+                    <div class="admin-grid-2">
+                        <div class="field"><label>First Name</label><input type="text" id="adminHeroFirstName" value="Kalondo"></div>
+                        <div class="field"><label>Last Name</label><input type="text" id="adminHeroLastName" value="Timothy"></div>
+                    </div>
+                    <div class="field"><label>Badge Title</label><input type="text" id="adminHeroBadge" value="BSN, RN"></div>
+                    <div class="field"><label>Location</label><input type="text" id="adminHeroLocation" value="Dallas-Fort Worth, Texas"></div>
+                    <div class="field"><label>Bio</label><textarea id="adminHeroBio" rows="2">Recent graduate Registered Nurse (2024) with a Bachelor of Science in Nursing. Dedicated to providing compassionate, evidence-based care to patients and families across Texas.</textarea></div>
+                    
+                    <!-- PROFILE IMAGE -->
+                    <div class="field">
+                        <label>Profile Image</label>
+                        <button class="btn btn-primary btn-sm" onclick="adminOpenMediaPicker('profile')" style="margin-bottom:8px;"><i class="fas fa-folder-open"></i> Browse Media</button>
+                        <button class="btn btn-outline btn-sm" onclick="adminClearImage('profile')" style="margin-left:8px;"><i class="fas fa-trash"></i> Remove</button>
+                        <div class="image-preview-box">
+                            <img id="adminProfilePreview" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face" alt="Profile Preview">
+                        </div>
+                    </div>
+                    
+                    <hr style="margin:15px 0;">
+                    <h4 style="color:#1a1a2e; margin-bottom:10px;"><i class="fas fa-image"></i> Hero Background Media</h4>
+                    <button class="btn btn-primary btn-sm" onclick="adminOpenMediaPicker('hero')"><i class="fas fa-folder-open"></i> Browse Media</button>
+                    <button class="btn btn-outline btn-sm" onclick="adminClearHeroMedia()" style="margin-left:8px;"><i class="fas fa-trash"></i> Remove</button>
+                    <div class="media-preview" id="adminMediaPreview" style="margin-top:12px; border:2px dashed #e9ecef; border-radius:14px; padding:20px; text-align:center; min-height:120px; background:#fafbfc; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;">
+                        <span class="placeholder" style="color:#adb5bd;">No media selected</span>
+                    </div>
+                    <div id="adminMediaStatus" style="margin-top:8px; display:none; padding:8px 12px; border-radius:8px;"></div>
+                </div>
+                
+                <div class="admin-card">
+                    <h4><i class="fas fa-address-card"></i> About Section</h4>
+                    <div class="field"><label>About Title</label><input type="text" id="adminAboutTitle" value="Kalondo Timothy, BSN, RN"></div>
+                    <div class="field"><label>Heading</label><input type="text" id="adminAboutHeading" value="Dedicated to Compassionate Care"></div>
+                    <div class="field"><label>Paragraph 1</label><textarea id="adminAboutPara1" rows="2">Kalondo Timothy is a recent graduate (2024) Registered Nurse with a Bachelor of Science in Nursing from the University of Texas at Arlington. Based in the Dallas-Fort Worth metroplex, he is proud to serve the diverse communities of Texas with excellence and empathy.</textarea></div>
+                    <div class="field"><label>Paragraph 2</label><textarea id="adminAboutPara2" rows="2">During clinical rotations across medical-surgical, emergency, and critical care units, Kalondo developed strong clinical assessment skills and the ability to remain calm under pressure.</textarea></div>
+                    
+                    <!-- ABOUT IMAGE -->
+                    <div class="field">
+                        <label>About Image</label>
+                        <button class="btn btn-primary btn-sm" onclick="adminOpenMediaPicker('about')"><i class="fas fa-folder-open"></i> Browse Media</button>
+                        <button class="btn btn-outline btn-sm" onclick="adminClearImage('about')" style="margin-left:8px;"><i class="fas fa-trash"></i> Remove</button>
+                        <div class="image-preview-box">
+                            <img id="adminAboutPreview" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="About Preview">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="admin-card">
+                    <h4><i class="fas fa-phone"></i> Contact Info</h4>
+                    <div class="field"><label>Display Email</label><input type="email" id="adminContactEmail" value="muwanguziibra09@gmail.com"></div>
+                    <div class="field"><label>Location</label><input type="text" id="adminContactLocation" value="Dallas-Fort Worth, Texas, USA"></div>
+                </div>
+                
+                <div class="admin-card">
+                    <h4><i class="fas fa-clinic-medical"></i> Practice Info</h4>
+                    <div class="field"><label>Practice Name</label><input type="text" id="adminPracticeName" value="Kalondo Timothy, BSN, RN"></div>
+                    <div class="field"><label>Practice Location</label><input type="text" id="adminPracticeLocation" value="Dallas-Fort Worth, Texas"></div>
+                </div>
+                <button class="save-btn" onclick="saveAdminContent()"><i class="fas fa-save"></i> Save Content</button>
+                <div id="adminContentStatus" class="status-msg"></div>
+            </div>
+            
+            <!-- Email Tab -->
+            <div class="admin-tab" id="tab-email">
+                <div class="admin-card">
+                    <h4><i class="fas fa-envelope"></i> EmailJS Settings</h4>
+                    <div class="info-box"><i class="fas fa-check-circle" style="color:#22c55e;"></i> <strong>Free tier – 200 emails/month</strong></div>
+                    <div class="field"><label>Public Key</label><input type="text" id="adminEmailjsPublicKey" placeholder="Your public key"></div>
+                    <div class="field"><label>Service ID</label><input type="text" id="adminEmailjsServiceID" placeholder="service_xxxxxx"></div>
+                    <div class="field"><label>Template ID</label><input type="text" id="adminTemplateID" placeholder="template_xxxxxx"></div>
+                    <div class="field"><label>Testimonial Template ID</label><input type="text" id="adminTestimonialTemplateID" placeholder="template_xxxxxx"></div>
+                    <div class="field"><label>Forward To Email</label><input type="email" id="adminForwardEmail" value="muwanguziibra09@gmail.com"></div>
+                    <div class="field"><label>Testimonial Notification Email</label><input type="email" id="adminTestimonialNotifyEmail" value="muwanguziibra09@gmail.com"></div>
+                    <button class="save-btn" onclick="saveAdminEmailSettings()"><i class="fas fa-save"></i> Save Email Settings</button>
+                    <div id="adminEmailStatus" class="status-msg"></div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Tab -->
+            <div class="admin-tab" id="tab-testimonials">
+                <div class="admin-card">
+                    <h4><i class="fas fa-star"></i> Testimonials Manager</h4>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:15px;align-items:center;">
+                        <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 16px;border-radius:40px;font-size:0.8rem;font-weight:600;background:#fbbf24;">⏳ Pending: <span id="adminPendingCount">0</span></span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 16px;border-radius:40px;font-size:0.8rem;font-weight:600;background:#22c55e;color:#fff;">✅ Published: <span id="adminPublishedCount">0</span></span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 16px;border-radius:40px;font-size:0.8rem;font-weight:600;background:#3b82f6;color:#fff;">📋 Total: <span id="adminTotalCount">0</span></span>
+                        <button onclick="loadAdminTestimonials()" style="background:#e9ecef;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.8rem;"><i class="fas fa-rotate"></i> Refresh</button>
+                        <button onclick="resetAdminTestimonials()" style="background:#f59e0b;color:#000;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.8rem;">⟳ Reset</button>
+                        <button onclick="clearAdminTestimonials()" style="background:#ef4444;color:#fff;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.8rem;">🗑 Delete All</button>
+                    </div>
+                    <div id="adminTestimonialList" style="max-height:400px;overflow-y:auto;"></div>
+                </div>
+            </div>
+            
+            <!-- Media Library Tab -->
+            <div class="admin-tab" id="tab-mediaLibrary">
+                <div class="admin-card">
+                    <h4><i class="fas fa-images"></i> Media Library</h4>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;align-items:center;">
+                        <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 16px;border-radius:40px;font-size:0.8rem;font-weight:600;background:#3b82f6;color:#fff;">📊 Total: <span id="adminMediaTotalCount">0</span></span>
+                        <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 16px;border-radius:40px;font-size:0.8rem;font-weight:600;background:#f59e0b;color:#000;">💾 Size: <span id="adminMediaTotalSize">0 KB</span></span>
+                        <button onclick="loadAdminMediaLibrary()" style="background:#e9ecef;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.8rem;"><i class="fas fa-rotate"></i> Refresh</button>
+                        <button onclick="clearAllAdminMedia()" style="background:#ef4444;color:#fff;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.8rem;">🗑 Clear All</button>
+                    </div>
+                    <div id="adminMediaLibraryList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;max-height:400px;overflow-y:auto;padding:4px;">
+                        <p style="color:#94a3b8;text-align:center;padding:30px;grid-column:1/-1;">No media uploaded.</p>
+                    </div>
+                    <hr>
+                    <h4>Upload New Media</h4>
+                    <input type="file" id="adminMediaLibraryUpload" accept="image/*,video/*" onchange="adminUploadToLibrary(event)" style="padding:12px;background:#f1f3f5;border-radius:12px;border:1px solid #e9ecef;width:100%;">
+                    <div id="adminMediaUploadStatus" style="margin-top:10px;display:none;padding:10px;border-radius:10px;"></div>
+                </div>
+            </div>
+            
+            <!-- Security Tab -->
+            <div class="admin-tab" id="tab-security">
+                <div class="admin-card" style="max-width:500px;">
+                    <h4><i class="fas fa-key"></i> Change Password</h4>
+                    <div class="field"><label>New Password (min 6)</label><input type="password" id="adminNewPassword" placeholder="Enter new password"></div>
+                    <div class="field"><label>Confirm Password</label><input type="password" id="adminConfirmPassword" placeholder="Confirm new password"></div>
+                    <button class="save-btn" onclick="updateAdminPassword()"><i class="fas fa-shield-check"></i> Update Password</button>
+                    <div id="adminPasswordStatus" class="status-msg"></div>
+                    <hr>
+                    <div class="info-box"><p style="font-size:0.8rem;"><i class="fas fa-info-circle"></i> Default: <strong style="color:#3b82f6;">timo2026</strong></p></div>
+                </div>
+            </div>
+            
+            <!-- Help Tab -->
+            <div class="admin-tab" id="tab-help">
+                <div class="admin-card">
+                    <h4><i class="fas fa-question-circle"></i> Quick Setup Guide</h4>
+                    <div class="info-box" style="border-left-color:#3b82f6;">
+                        <h4 style="color:#3b82f6;">📧 EmailJS Setup</h4>
+                        <p>1. Create account at <a href="https://www.emailjs.com/" target="_blank" style="color:#3b82f6;">EmailJS.com</a></p>
+                        <p>2. Account → API Keys → Copy <strong>Public Key</strong></p>
+                        <p>3. Email Services → Create → Copy <strong>Service ID</strong></p>
+                        <p>4. Email Templates → Create → Copy <strong>Template ID</strong></p>
+                        <p>5. Paste into Email tab → Save</p>
+                        
+                    </div>
+                    <div class="info-box" style="border-left-color:#e55368;">
+                        <h4 style="color:#e55368;">⭐ Testimonial Email</h4>
+                        <p>Create a template with subject: <code>New Testimonial from {{from_name}}</code></p>
+                        <p>To: <code>{{to_email}}</code> → paste Template ID in Email tab</p>
+                    </div>
+                    <div class="info-box" style="border-left-color:#f59e0b;">
+                        <h4 style="color:#f59e0b;">🔑 Default Password</h4>
+                        <p style="font-family:monospace; font-size:1rem; color:#3b82f6;">timo2026</p>
+                        <p style="font-size:0.8rem;">Change in <strong>Security</strong> tab</p>
+                    </div>
+                    <div class="info-box" style="border-left-color:#22c55e;">
+                        <h4 style="color:#22c55e;">📱 Admin Access</h4>
+                        <p>Tap the profile image <strong>5 times</strong> to open the admin panel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MEDIA PICKER MODAL -->
+<div id="mediaPickerModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 style="color:#0b0f19;">Select Media</h3>
+            <button onclick="closeAdminMediaPicker()">&times;</button>
+        </div>
+        <div id="mediaPickerGrid" class="media-select-grid">
+            <p style="color:#94a3b8; text-align:center; padding:20px; grid-column:1/-1;">No media found.</p>
+        </div>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid #e9ecef; display:flex; gap:10px; justify-content:flex-end;">
+            <button class="btn btn-outline btn-sm" onclick="closeAdminMediaPicker()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+// ============================================
+// DEFAULT IMAGES
+// ============================================
+const DEFAULT_IMAGES = {
+    profile: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face',
+    about: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop',
+    heroBg: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=800&fit=crop'
+};
+
+const DEFAULT_TESTIMONIALS = [
+    { id:1, name:'Sarah Johnson', role:'Patient', content:'Kalondo provided exceptional care and made me feel at ease throughout my treatment.', rating:5, createdAt:'2024-01-15', status:'approved' },
+    { id:2, name:'Michael Chen', role:'Patient', content:'I highly recommend Kalondo Timothy. His professionalism and compassion are outstanding.', rating:5, createdAt:'2024-02-20', status:'approved' },
+    { id:3, name:'Emily Davis', role:'Patient', content:'Kalondo took the time to listen to all my concerns and explained everything clearly. Excellent experience!', rating:4, createdAt:'2024-03-10', status:'approved' }
+];
+
+// ============================================
+// ADMIN - TAP PROFILE IMAGE 5 TIMES
+// ============================================
+let tapCount = 0;
+let tapTimer = null;
+
+document.getElementById('heroProfileImg').addEventListener('click', function() {
+    tapCount++;
+    clearTimeout(tapTimer);
+    if (tapCount >= 5) {
+        tapCount = 0;
+        document.getElementById('adminOverlay').classList.add('show');
+        document.getElementById('adminPassword').value = '';
+        document.getElementById('adminLoginError').style.display = 'none';
+        document.getElementById('adminLogin').style.display = 'flex';
+        document.getElementById('adminDashboard').style.display = 'none';
+        document.getElementById('adminPassword').focus();
+    } else {
+        tapTimer = setTimeout(() => { tapCount = 0; }, 1000);
+    }
+});
+
+function closeAdmin() {
+    document.getElementById('adminOverlay').classList.remove('show');
+}
+
+// ============================================
+// ADMIN - LOGIN
+// ============================================
+function adminLogin() {
+    const input = document.getElementById('adminPassword').value;
+    const defaultPassword = 'timo2026';
+    const storedPassword = localStorage.getItem('adminPassword') || defaultPassword;
+    
+    if (input === storedPassword) {
+        document.getElementById('adminLogin').style.display = 'none';
+        document.getElementById('adminDashboard').style.display = 'block';
+        document.getElementById('adminLoginError').style.display = 'none';
+        loadAdminData();
+        loadAdminMediaLibrary();
+    } else {
+        document.getElementById('adminLoginError').style.display = 'block';
+        document.getElementById('adminPassword').value = '';
+        document.getElementById('adminPassword').focus();
+    }
+}
+
+document.getElementById('adminPassword').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') adminLogin();
+});
+
+// ============================================
+// ADMIN - SWITCH TABS
+// ============================================
+function switchAdminTab(tabId, el) {
+    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.admin-tabs button').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.add('active');
+    if (el) el.classList.add('active');
+    if (tabId === 'testimonials') loadAdminTestimonials();
+    if (tabId === 'mediaLibrary') loadAdminMediaLibrary();
+}
+
+// ============================================
+// ADMIN - MEDIA LIBRARY
+// ============================================
+const MEDIA_LIBRARY_KEY = 'media_library';
+const MAX_STORAGE = 5 * 1024 * 1024;
+
+function getAdminMediaLibrary() {
+    try { return JSON.parse(localStorage.getItem(MEDIA_LIBRARY_KEY)) || []; } catch(e){ return []; }
+}
+
+function saveAdminMediaLibrary(media) {
+    try { localStorage.setItem(MEDIA_LIBRARY_KEY, JSON.stringify(media)); return true; } catch(e){ return false; }
+}
+
+function getAdminTotalSize(media) { return media.reduce((sum,item) => sum + (item.size || 0), 0); }
+
+function formatAdminSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1048576).toFixed(2) + ' MB';
+}
+
+function loadAdminMediaLibrary() {
+    const media = getAdminMediaLibrary();
+    const container = document.getElementById('adminMediaLibraryList');
+    document.getElementById('adminMediaTotalCount').textContent = media.length;
+    document.getElementById('adminMediaTotalSize').textContent = formatAdminSize(getAdminTotalSize(media));
+    if (!container) return;
+    if (media.length === 0) {
+        container.innerHTML = '<p style="color:#94a3b8;text-align:center;padding:30px;grid-column:1/-1;">No media files.</p>';
+        return;
+    }
+    let html = '';
+    media.forEach((item, idx) => {
+        const isVideo = item.type && item.type.startsWith('video/');
+        const preview = isVideo ? 
+            `<video style="width:100%;height:120px;object-fit:cover;border-radius:10px;"><source src="${item.data}"></video>` :
+            `<img src="${item.data}" style="width:100%;height:120px;object-fit:cover;border-radius:10px;">`;
+        html += `<div style="background:white;border-radius:14px;overflow:hidden;border:1px solid #e9ecef;position:relative;box-shadow:0 2px 8px rgba(0,0,0,0.02);">
+            <div style="position:relative;">${preview}
+            <button onclick="adminDeleteMedia(${idx})" style="position:absolute;top:6px;right:6px;background:rgba(239,68,68,0.9);color:white;border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:14px;">×</button>
+            </div>
+            <div style="padding:8px 10px;font-size:0.75rem;color:#6c757d;">
+                <div style="font-weight:600;color:#0b0f19;font-size:0.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${item.name || 'Untitled'}</div>
+                <div>${formatAdminSize(item.size || 0)}</div>
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+function adminUploadToLibrary(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const status = document.getElementById('adminMediaUploadStatus');
+    const media = getAdminMediaLibrary();
+    const currentSize = getAdminTotalSize(media);
+    if (currentSize + file.size > MAX_STORAGE) {
+        status.style.display = 'block';
+        status.style.color = '#ef4444';
+        status.style.background = '#fee2e2';
+        status.innerHTML = `❌ Storage limit exceeded (${formatAdminSize(currentSize)} / 5MB)`;
+        event.target.value = '';
+        return;
+    }
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const dataUrl = e.target.result;
+        media.push({ id: Date.now(), name: file.name, type: file.type, size: file.size, data: dataUrl, uploadedAt: new Date().toISOString() });
+        if (saveAdminMediaLibrary(media)) {
+            status.style.display = 'block';
+            status.style.color = '#22c55e';
+            status.style.background = '#dcfce7';
+            status.innerHTML = `✅ Uploaded (${formatAdminSize(file.size)})`;
+            loadAdminMediaLibrary();
+            event.target.value = '';
+            setTimeout(() => { status.style.display = 'none'; }, 3000);
+        } else {
+            status.style.display = 'block';
+            status.style.color = '#ef4444';
+            status.style.background = '#fee2e2';
+            status.innerHTML = '❌ Save failed. Storage full?';
+        }
+    };
+    reader.readAsDataURL(file);
+}
+
+function adminDeleteMedia(index) {
+    if (!confirm('Delete this media?')) return;
+    const media = getAdminMediaLibrary();
+    media.splice(index, 1);
+    saveAdminMediaLibrary(media);
+    loadAdminMediaLibrary();
+}
+
+function clearAllAdminMedia() {
+    if (!confirm('Delete ALL media?')) return;
+    if (!confirm('Are you sure?')) return;
+    saveAdminMediaLibrary([]);
+    loadAdminMediaLibrary();
+    alert('🗑️ All media deleted.');
+}
+
+// ============================================
+// ADMIN - MEDIA PICKER
+// ============================================
+let adminMediaPickerTarget = 'hero';
+
+function adminOpenMediaPicker(target) {
+    adminMediaPickerTarget = target;
+    const modal = document.getElementById('mediaPickerModal');
+    const grid = document.getElementById('mediaPickerGrid');
+    const media = getAdminMediaLibrary();
+    modal.style.display = 'flex';
+    if (media.length === 0) {
+        grid.innerHTML = '<p style="color:#94a3b8;text-align:center;padding:20px;grid-column:1/-1;">No media. Upload in Media tab.</p>';
+        return;
+    }
+    let html = '';
+    media.forEach((item, idx) => {
+        const isVideo = item.type && item.type.startsWith('video/');
+        const preview = isVideo ? 
+            `<video style="width:100%;height:70px;object-fit:cover;border-radius:6px;"><source src="${item.data}"></video>` :
+            `<img src="${item.data}" style="width:100%;height:70px;object-fit:cover;border-radius:6px;">`;
+        html += `<div class="media-select-item" onclick="adminSelectMedia(${idx})">${preview}<div class="name">${item.name || 'Untitled'}</div></div>`;
+    });
+    grid.innerHTML = html;
+}
+
+function closeAdminMediaPicker() {
+    document.getElementById('mediaPickerModal').style.display = 'none';
+}
+
+function adminSelectMedia(index) {
+    const media = getAdminMediaLibrary();
+    const item = media[index];
+    if (!item) return;
+    const dataUrl = item.data;
+    
+    if (adminMediaPickerTarget === 'hero') {
+        const preview = document.getElementById('adminMediaPreview');
+        const isVideo = item.type && item.type.startsWith('video/');
+        if (isVideo) {
+            preview.innerHTML = `<video controls autoplay muted loop style="max-width:100%;max-height:200px;border-radius:12px;"><source src="${dataUrl}"></video>`;
+        } else {
+            preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;max-height:200px;border-radius:12px;">`;
+        }
+        if (!document.getElementById('adminHeroMediaUrl')) {
+            const inp = document.createElement('input');
+            inp.type = 'hidden';
+            inp.id = 'adminHeroMediaUrl';
+            inp.value = dataUrl;
+            document.getElementById('adminMediaPreview').parentNode.appendChild(inp);
+        } else {
+            document.getElementById('adminHeroMediaUrl').value = dataUrl;
+        }
+        const st = document.getElementById('adminMediaStatus');
+        st.style.display = 'block';
+        st.style.color = '#22c55e';
+        st.style.background = '#dcfce7';
+        st.innerHTML = '✅ Hero media selected. Save to apply.';
+    } else if (adminMediaPickerTarget === 'profile') {
+        document.getElementById('adminProfilePreview').src = dataUrl;
+        document.getElementById('adminProfilePreview').dataset.url = dataUrl;
+    } else if (adminMediaPickerTarget === 'about') {
+        document.getElementById('adminAboutPreview').src = dataUrl;
+        document.getElementById('adminAboutPreview').dataset.url = dataUrl;
+    }
+    closeAdminMediaPicker();
+}
+
+function adminClearImage(target) {
+    if (target === 'profile') {
+        document.getElementById('adminProfilePreview').src = 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face';
+        document.getElementById('adminProfilePreview').dataset.url = '';
+    } else if (target === 'about') {
+        document.getElementById('adminAboutPreview').src = 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop';
+        document.getElementById('adminAboutPreview').dataset.url = '';
+    }
+}
+
+function adminClearHeroMedia() {
+    if (!confirm('Remove hero media?')) return;
+    document.getElementById('adminMediaPreview').innerHTML = '<span class="placeholder" style="color:#adb5bd;">No media selected</span>';
+    document.getElementById('adminHeroMediaUrl').value = '';
+    const st = document.getElementById('adminMediaStatus');
+    st.style.display = 'block';
+    st.style.color = '#22c55e';
+    st.style.background = '#dcfce7';
+    st.innerHTML = '✅ Removed. Save to update.';
+}
+
+// ============================================
+// ADMIN - CONTENT
+// ============================================
+function loadAdminData() {
+    const saved = localStorage.getItem('portfolioData');
+    if (saved) {
+        const d = JSON.parse(saved);
+        document.getElementById('adminHeroFirstName').value = d.heroFirstName || 'Kalondo';
+        document.getElementById('adminHeroLastName').value = d.heroLastName || 'Timothy';
+        document.getElementById('adminHeroBadge').value = d.heroBadge || 'BSN, RN';
+        document.getElementById('adminHeroLocation').value = d.heroLocation || 'Dallas-Fort Worth, Texas';
+        document.getElementById('adminHeroBio').value = d.heroBio || '';
+        document.getElementById('adminAboutTitle').value = d.aboutTitleName || 'Kalondo Timothy, BSN, RN';
+        document.getElementById('adminAboutHeading').value = d.aboutHeading || 'Dedicated to Compassionate Care';
+        document.getElementById('adminAboutPara1').value = d.aboutPara1 || '';
+        document.getElementById('adminAboutPara2').value = d.aboutPara2 || '';
+        document.getElementById('adminContactEmail').value = d.contactEmail || 'muwanguziibra09@gmail.com';
+        document.getElementById('adminContactLocation').value = d.contactLocation || 'Dallas-Fort Worth, Texas, USA';
+        document.getElementById('adminPracticeName').value = d.practiceName || 'Kalondo Timothy, BSN, RN';
+        document.getElementById('adminPracticeLocation').value = d.practiceLocation || 'Dallas-Fort Worth, Texas';
+        
+        if (d.heroProfileImg) {
+            document.getElementById('adminProfilePreview').src = d.heroProfileImg;
+            document.getElementById('adminProfilePreview').dataset.url = d.heroProfileImg;
+        }
+        if (d.aboutImg) {
+            document.getElementById('adminAboutPreview').src = d.aboutImg;
+            document.getElementById('adminAboutPreview').dataset.url = d.aboutImg;
+        }
+        
+        if (d.heroMedia) {
+            const preview = document.getElementById('adminMediaPreview');
+            const isVideo = d.heroMedia.includes('data:video') || ['mp4','webm','ogg','mov'].some(ext => d.heroMedia.endsWith(ext));
+            if (isVideo) {
+                preview.innerHTML = `<video controls autoplay muted loop style="max-width:100%;max-height:200px;border-radius:12px;"><source src="${d.heroMedia}"></video>`;
+            } else {
+                preview.innerHTML = `<img src="${d.heroMedia}" style="max-width:100%;max-height:200px;border-radius:12px;">`;
+            }
+            if (!document.getElementById('adminHeroMediaUrl')) {
+                const inp = document.createElement('input');
+                inp.type = 'hidden';
+                inp.id = 'adminHeroMediaUrl';
+                inp.value = d.heroMedia;
+                document.getElementById('adminMediaPreview').parentNode.appendChild(inp);
+            } else {
+                document.getElementById('adminHeroMediaUrl').value = d.heroMedia;
+            }
+        }
+    }
+    loadAdminEmailSettings();
+}
+
+function saveAdminContent() {
+    const data = {
+        heroFirstName: document.getElementById('adminHeroFirstName').value,
+        heroLastName: document.getElementById('adminHeroLastName').value,
+        heroBadge: document.getElementById('adminHeroBadge').value,
+        heroLocation: document.getElementById('adminHeroLocation').value,
+        heroBio: document.getElementById('adminHeroBio').value,
+        heroProfileImg: document.getElementById('adminProfilePreview').dataset.url || document.getElementById('adminProfilePreview').src,
+        aboutTitleName: document.getElementById('adminAboutTitle').value,
+        aboutHeading: document.getElementById('adminAboutHeading').value,
+        aboutPara1: document.getElementById('adminAboutPara1').value,
+        aboutPara2: document.getElementById('adminAboutPara2').value,
+        aboutImg: document.getElementById('adminAboutPreview').dataset.url || document.getElementById('adminAboutPreview').src,
+        contactEmail: document.getElementById('adminContactEmail').value,
+        contactLocation: document.getElementById('adminContactLocation').value,
+        practiceName: document.getElementById('adminPracticeName').value,
+        practiceLocation: document.getElementById('adminPracticeLocation').value,
+        footerText: 'Kalondo Timothy, BSN, RN. All Rights Reserved.'
+    };
+    const heroMedia = document.getElementById('adminHeroMediaUrl');
+    if (heroMedia && heroMedia.value) data.heroMedia = heroMedia.value;
+    localStorage.setItem('portfolioData', JSON.stringify(data));
+    const st = document.getElementById('adminContentStatus');
+    st.className = 'status-msg success';
+    st.textContent = '✅ Content saved successfully!';
+    st.style.display = 'block';
+    setTimeout(() => { st.style.display = 'none'; }, 3000);
+    loadPageData();
+}
+
+// ============================================
+// ADMIN - EMAIL
+// ============================================
+function loadAdminEmailSettings() {
+    const keys = ['emailjsPublicKey', 'emailjsServiceID', 'templateID', 'testimonialTemplateID', 'forwardEmail', 'testimonialNotifyEmail'];
+    keys.forEach(k => {
+        const val = localStorage.getItem(k);
+        const el = document.getElementById('admin' + k.charAt(0).toUpperCase() + k.slice(1));
+        if (el && val) el.value = val;
+    });
+}
+
+function saveAdminEmailSettings() {
+    const pk = document.getElementById('adminEmailjsPublicKey').value;
+    const sid = document.getElementById('adminEmailjsServiceID').value;
+    const tid = document.getElementById('adminTemplateID').value;
+    const ttid = document.getElementById('adminTestimonialTemplateID').value;
+    const fwd = document.getElementById('adminForwardEmail').value;
+    const notify = document.getElementById('adminTestimonialNotifyEmail').value;
+    
+    if (!pk || !sid || !tid) {
+        const st = document.getElementById('adminEmailStatus');
+        st.className = 'status-msg error';
+        st.textContent = '❌ Please fill Public Key, Service ID, and Template ID';
+        st.style.display = 'block';
+        setTimeout(() => { st.style.display = 'none'; }, 3000);
+        return;
+    }
+    
+    localStorage.setItem('emailjsPublicKey', pk);
+    localStorage.setItem('emailjsServiceID', sid);
+    localStorage.setItem('templateID', tid);
+    localStorage.setItem('testimonialTemplateID', ttid);
+    localStorage.setItem('forwardEmail', fwd);
+    localStorage.setItem('testimonialNotifyEmail', notify);
+    
+    const st = document.getElementById('adminEmailStatus');
+    st.className = 'status-msg success';
+    st.textContent = '✅ Email settings saved!';
+    st.style.display = 'block';
+    setTimeout(() => { st.style.display = 'none'; }, 3000);
+}
+
+// ============================================
+// ADMIN - TESTIMONIALS
+// ============================================
+const ADMIN_TESTIMONIALS_KEY = 'testimonials_table';
+
+function getAdminTestimonials() {
+    const data = localStorage.getItem(ADMIN_TESTIMONIALS_KEY);
+    return data ? JSON.parse(data) : [];
+}
+
+function loadAdminTestimonials() {
+    const list = getAdminTestimonials();
+    const pending = list.filter(t => t.status === 'pending');
+    const approved = list.filter(t => t.status === 'approved');
+    
+    document.getElementById('adminPendingCount').textContent = pending.length;
+    document.getElementById('adminPublishedCount').textContent = approved.length;
+    document.getElementById('adminTotalCount').textContent = list.length;
+    
+    const container = document.getElementById('adminTestimonialList');
+    if (!container) return;
+    if (list.length === 0) {
+        container.innerHTML = '<p style="color:#94a3b8;text-align:center;padding:30px;">No testimonials found.</p>';
+        return;
+    }
+    
+    let html = '';
+    list.forEach((t, i) => {
+        let stars = '';
+        for (let s = 0; s < t.rating; s++) stars += '★';
+        for (let s = t.rating; s < 5; s++) stars += '☆';
+        const isPending = t.status === 'pending';
+        const badgeClass = isPending ? 'badge-pending' : 'badge-approved';
+        const badgeText = isPending ? '⏳ Pending' : '✅ Published';
+        
+        html += `<div class="admin-list-item">
+            <div class="info">
+                <div class="name">${t.name} <span class="badge-status ${badgeClass}">${badgeText}</span></div>
+                <div class="content">"${t.content}"</div>
+                <div class="meta">${stars} • ${t.role || 'Client'} • ${t.createdAt || ''}</div>
+            </div>
+            <div class="actions">
+                ${isPending ? `
+                    <button class="approve" onclick="adminApproveTestimonial(${i})">✅ Approve</button>
+                    <button class="deny" onclick="adminDenyTestimonial(${i})">❌ Deny</button>
+                ` : `
+                    <button class="delete" onclick="adminDeleteTestimonial(${i})">🗑 Delete</button>
+                `}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+function adminApproveTestimonial(index) {
+    if (!confirm('Approve this testimonial?')) return;
+    
+    const list = getAdminTestimonials();
+    const newTestimonial = list[index];
+    
+    const existingIndex = list.findIndex((t, i) => 
+        t.email === newTestimonial.email && 
+        t.status === 'approved' && 
+        i !== index
+    );
+    
+    if (existingIndex !== -1) {
+        list.splice(existingIndex, 1);
+        const newIndex = list.findIndex(t => t.id === newTestimonial.id);
+        if (newIndex !== -1) {
+            list[newIndex].status = 'approved';
+        }
+    } else {
+        const newIndex = list.findIndex(t => t.id === newTestimonial.id);
+        if (newIndex !== -1) {
+            list[newIndex].status = 'approved';
+        }
+    }
+    
+    localStorage.setItem(ADMIN_TESTIMONIALS_KEY, JSON.stringify(list));
+    loadAdminTestimonials();
+    renderTestimonials();
+    alert('✅ Testimonial approved! Old testimonial with same email removed.');
+}
+
+function adminDenyTestimonial(index) {
+    if (!confirm('Deny and delete this testimonial?')) return;
+    const list = getAdminTestimonials();
+    list.splice(index, 1);
+    localStorage.setItem(ADMIN_TESTIMONIALS_KEY, JSON.stringify(list));
+    loadAdminTestimonials();
+    renderTestimonials();
+    alert('❌ Testimonial denied.');
+}
+
+function adminDeleteTestimonial(index) {
+    if (!confirm('Delete this testimonial?')) return;
+    const list = getAdminTestimonials();
+    list.splice(index, 1);
+    localStorage.setItem(ADMIN_TESTIMONIALS_KEY, JSON.stringify(list));
+    loadAdminTestimonials();
+    renderTestimonials();
+    alert('🗑️ Testimonial deleted.');
+}
+
+function resetAdminTestimonials() {
+    if (!confirm('Reset to default testimonials?')) return;
+    localStorage.setItem(ADMIN_TESTIMONIALS_KEY, JSON.stringify(DEFAULT_TESTIMONIALS));
+    loadAdminTestimonials();
+    renderTestimonials();
+    alert('✅ Reset to default testimonials.');
+}
+
+function clearAdminTestimonials() {
+    if (!confirm('Delete ALL testimonials?')) return;
+    if (!confirm('Are you sure?')) return;
+    localStorage.removeItem(ADMIN_TESTIMONIALS_KEY);
+    loadAdminTestimonials();
+    renderTestimonials();
+    alert('🗑️ All testimonials deleted.');
+}
+
+// ============================================
+// ADMIN - SECURITY
+// ============================================
+function updateAdminPassword() {
+    const np = document.getElementById('adminNewPassword').value;
+    const cp = document.getElementById('adminConfirmPassword').value;
+    const st = document.getElementById('adminPasswordStatus');
+    
+    if (np.length < 6) {
+        st.className = 'status-msg error';
+        st.textContent = '❌ Password must be at least 6 characters';
+        st.style.display = 'block';
+        setTimeout(() => { st.style.display = 'none'; }, 3000);
+        return;
+    }
+    if (np !== cp) {
+        st.className = 'status-msg error';
+        st.textContent = '❌ Passwords do not match';
+        st.style.display = 'block';
+        setTimeout(() => { st.style.display = 'none'; }, 3000);
+        return;
+    }
+    
+    localStorage.setItem('adminPassword', np);
+    
+    st.className = 'status-msg success';
+    st.textContent = '✅ Password updated successfully!';
+    st.style.display = 'block';
+    document.getElementById('adminNewPassword').value = '';
+    document.getElementById('adminConfirmPassword').value = '';
+    setTimeout(() => { st.style.display = 'none'; }, 3000);
+}
+
+// ============================================
+// HERO BACKGROUND - Load from localStorage
+// ============================================
+function loadHeroBackground() {
+    const saved = localStorage.getItem('portfolioData');
+    const heroBg = document.getElementById('heroBackground');
+    if (!heroBg) return;
+    
+    if (saved) {
+        const data = JSON.parse(saved);
+        if (data.heroMedia && data.heroMedia.trim() !== '') {
+            const isVideo = data.heroMedia.includes('data:video') || 
+                           ['mp4','webm','ogg','mov'].some(ext => data.heroMedia.endsWith(ext));
+            if (isVideo) {
+                heroBg.innerHTML = `<video class="hero-video" autoplay muted loop playsinline><source src="${data.heroMedia}"></video>`;
+            } else {
+                heroBg.innerHTML = `<img class="hero-img-bg" src="${data.heroMedia}" alt="Hero Background" onerror="this.src='${DEFAULT_IMAGES.heroBg}'">`;
+            }
+            return;
+        }
+    }
+    heroBg.innerHTML = `<img class="hero-img-bg" src="${DEFAULT_IMAGES.heroBg}" alt="Hero Background">`;
+}
+
+// ============================================
+// UPDATE IMAGES FROM LOCALSTORAGE
+// ============================================
+function updateImages() {
+    const savedData = localStorage.getItem('portfolioData');
+    const profileImg = document.getElementById('heroProfileImg');
+    const aboutImg = document.getElementById('aboutImg');
+    
+    if (!profileImg || !aboutImg) return;
+    
+    profileImg.onerror = null;
+    aboutImg.onerror = null;
+    
+    if (savedData) {
+        const data = JSON.parse(savedData);
+        
+        if (data.heroProfileImg && data.heroProfileImg.trim() !== '' && 
+            data.heroProfileImg.trim() !== 'images/kalondo-profile.jpg') {
+            profileImg.src = data.heroProfileImg;
+            profileImg.onerror = function() {
+                this.src = DEFAULT_IMAGES.profile;
+                this.onerror = null;
+            };
+        } else {
+            profileImg.src = DEFAULT_IMAGES.profile;
+        }
+        
+        if (data.aboutImg && data.aboutImg.trim() !== '' && 
+            data.aboutImg.trim() !== 'images/kalondo-about.jpg') {
+            aboutImg.src = data.aboutImg;
+            aboutImg.onerror = function() {
+                this.src = DEFAULT_IMAGES.about;
+                this.onerror = null;
+            };
+        } else {
+            aboutImg.src = DEFAULT_IMAGES.about;
+        }
+    } else {
+        profileImg.src = DEFAULT_IMAGES.profile;
+        aboutImg.src = DEFAULT_IMAGES.about;
+    }
+}
+
+// ============================================
+// TESTIMONIALS - PUBLIC
+// ============================================
+const TESTIMONIALS_KEY = 'testimonials_table';
+
+function getTestimonials() {
+    try {
+        const data = localStorage.getItem(TESTIMONIALS_KEY);
+        return data ? JSON.parse(data) : [];
+    } catch {
+        return [];
+    }
+}
+
+function sendTestimonialNotification(name, email, role, rating, message) {
+    const publicKey = localStorage.getItem('emailjsPublicKey') || '';
+    const serviceID = localStorage.getItem('emailjsServiceID') || '';
+    const testimonialTemplateID = localStorage.getItem('testimonialTemplateID') || '';
+    const testimonialNotifyEmail = localStorage.getItem('testimonialNotifyEmail') || 'muwanguziibra09@gmail.com';
+    
+    const portfolioData = JSON.parse(localStorage.getItem('portfolioData') || '{}');
+    const practiceName = portfolioData.practiceName || 'Kalondo Timothy, BSN, RN';
+    const practiceLocation = portfolioData.practiceLocation || 'Dallas-Fort Worth, Texas';
+    
+    if (!publicKey || !serviceID || !testimonialTemplateID) {
+        console.log('⚠️ Email not configured. Testimonial notification not sent.');
+        return;
+    }
+    
+    let stars = '';
+    for (let s = 0; s < rating; s++) stars += '⭐';
+    for (let s = rating; s < 5; s++) stars += '☆';
+    
+    const templateParams = {
+        practice_name: practiceName,
+        practice_location: practiceLocation,
+        from_name: name,
+        from_email: email,
+        role: role || 'Client',
+        rating: stars,
+        message: message,
+        time: new Date().toLocaleString(),
+        to_email: testimonialNotifyEmail
+    };
+    
+    console.log('📧 Sending testimonial notification email to nurse...');
+    
+    emailjs.init(publicKey);
+    emailjs.send(serviceID, testimonialTemplateID, templateParams)
+        .then(function(response) {
+            console.log('✅ Testimonial notification sent to nurse!', response);
+        })
+        .catch(function(error) {
+            console.error('❌ Failed to send notification:', error);
+        });
+}
+
+function renderTestimonials() {
+    const allTestimonials = getTestimonials();
+    const testimonials = allTestimonials.filter(t => t.status === 'approved');
+    const container = document.getElementById('publishedTestimonials');
+    if (!container) return;
+    
+    if (testimonials.length === 0) {
+        container.innerHTML = '<div style="text-align:center;color:rgba(255,255,255,0.6);padding:40px;grid-column:1/-1;background:rgba(255,255,255,0.05);border-radius:16px;border:1px dashed rgba(255,255,255,0.1);backdrop-filter:blur(10px);">No approved testimonials yet. Check back soon!</div>';
+        return;
+    }
+    
+    let html = '';
+    testimonials.forEach(t => {
+        let stars = '';
+        for (let s = 0; s < t.rating; s++) stars += '★';
+        for (let s = t.rating; s < 5; s++) stars += '☆';
+        html += `
+            <div class="testimonial-item">
+                <div class="glass-glow"></div>
+                <div class="stars">${stars}</div>
+                <div class="content">${t.content}</div>
+                <div class="name">- ${t.name}</div>
+                <div class="role">${t.role || 'Client'}</div>
+                <div class="date">${t.createdAt || new Date(t.id).toLocaleDateString()}</div>
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+function toggleForm() {
+    const container = document.getElementById('testimonialFormContainer');
+    const btn = document.getElementById('toggleFormBtn');
+    if (!container || !btn) return;
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'block';
+        btn.innerHTML = '✕ Close Form';
+        btn.style.background = '#666';
+    } else {
+        container.style.display = 'none';
+        btn.innerHTML = '+ Add Testimonial';
+        btn.style.background = '#E55368';
+    }
+}
+
+// ============================================
+// CONTACT FORM
+// ============================================
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+// ============================================
+// LOAD PAGE DATA
+// ============================================
+function loadPageData() {
+    loadHeroBackground();
+    updateImages();
+    renderTestimonials();
+    
+    const savedData = localStorage.getItem('portfolioData');
+    if (savedData) {
+        const pageData = JSON.parse(savedData);
+        if (pageData.logoText1) document.getElementById('logoText1').innerText = pageData.logoText1;
+        if (pageData.logoText2) document.getElementById('logoText2').innerText = pageData.logoText2;
+        if (pageData.heroBadge) document.getElementById('heroBadge').innerText = pageData.heroBadge;
+        if (pageData.heroFirstName) document.getElementById('heroFirstName').innerText = pageData.heroFirstName;
+        if (pageData.heroLastName) document.getElementById('heroLastName').innerText = pageData.heroLastName;
+        if (pageData.heroLocation) document.getElementById('heroLocation').innerText = pageData.heroLocation;
+        if (pageData.heroBio) document.getElementById('heroBio').innerText = pageData.heroBio;
+        if (pageData.aboutTitleName) document.getElementById('aboutTitleName').innerText = pageData.aboutTitleName;
+        if (pageData.aboutHeading) document.getElementById('aboutHeading').innerText = pageData.aboutHeading;
+        if (pageData.aboutPara1) document.getElementById('aboutPara1').innerText = pageData.aboutPara1;
+        if (pageData.aboutPara2) document.getElementById('aboutPara2').innerText = pageData.aboutPara2;
+        if (pageData.contactEmail) document.getElementById('contactEmail').innerText = pageData.contactEmail;
+        if (pageData.contactLocation) document.getElementById('contactLocation').innerText = pageData.contactLocation;
+        if (pageData.footerText) document.getElementById('footerText').innerText = pageData.footerText;
+    }
+}
+
+// ============================================
+// DOM READY
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    loadPageData();
+    
+    const preferredContact = document.getElementById('userPreferredContact');
+    const otherField = document.getElementById('userOtherContact');
+    if (preferredContact) {
+        preferredContact.addEventListener('change', function() {
+            if (this.value === 'Other') {
+                otherField.style.display = 'block';
+                otherField.required = true;
+            } else {
+                otherField.style.display = 'none';
+                otherField.required = false;
+                otherField.value = '';
+            }
+        });
+    }
+
+    const testimonialForm = document.getElementById('testimonialForm');
+    if (testimonialForm) {
+        testimonialForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('testimonialName').value.trim();
+            const email = document.getElementById('testimonialEmail').value.trim();
+            const role = document.getElementById('testimonialRole').value.trim();
+            const rating = parseInt(document.getElementById('testimonialRating').value);
+            const message = document.getElementById('testimonialMessage').value.trim();
+            const status = document.getElementById('testimonialStatus');
+            const btn = document.getElementById('testimonialBtn');
+            status.style.display = 'none';
+            
+            if (!name) { showTestError(status, 'Enter your name'); return; }
+            if (!email) { showTestError(status, 'Enter your email'); return; }
+            if (!isValidEmail(email)) { showTestError(status, 'Enter a valid email'); return; }
+            if (!message) { showTestError(status, 'Enter your message'); return; }
+            if (!rating || rating === '') { showTestError(status, 'Select a rating'); return; }
+            
+            const testimonials = getTestimonials();
+            const existingIndex = testimonials.findIndex(t => t.email === email);
+            if (existingIndex !== -1) {
+                testimonials.splice(existingIndex, 1);
+            }
+            
+            testimonials.push({
+                id: Date.now(),
+                name: name,
+                email: email,
+                role: role || 'Client',
+                rating: rating,
+                content: message,
+                createdAt: new Date().toLocaleDateString(),
+                status: 'pending'
+            });
+            localStorage.setItem(TESTIMONIALS_KEY, JSON.stringify(testimonials));
+            
+            sendTestimonialNotification(name, email, role, rating, message);
+            
+            status.style.display = 'block';
+            status.style.color = '#22c55e';
+            status.style.background = 'rgba(34,197,94,0.15)';
+            status.innerHTML = '✅ Thank you! Your testimonial has been submitted for review.';
+            btn.disabled = true;
+            btn.innerHTML = '✅ Sent';
+            testimonialForm.reset();
+            renderTestimonials();
+            toggleForm();
+            
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = 'Submit';
+                status.style.display = 'none';
+            }, 3000);
+        });
+    }
+    
+    function showTestError(el, msg) {
+        el.style.display = 'block';
+        el.style.color = '#ef4444';
+        el.style.background = 'rgba(239,68,68,0.15)';
+        el.innerHTML = '⚠️ ' + msg;
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const statusDiv = document.getElementById('formStatus');
+            const sendBtn = document.getElementById('sendBtn');
+            const emailInput = document.getElementById('userEmail');
+            const emailError = document.getElementById('emailError');
+            
+            if (!isValidEmail(emailInput.value)) {
+                emailError.style.display = 'block';
+                emailInput.style.borderColor = '#ef4444';
+                emailInput.focus();
+                return;
+            } else {
+                emailError.style.display = 'none';
+                emailInput.style.borderColor = '#ddd';
+            }
+            
+            const publicKey = localStorage.getItem('emailjsPublicKey') || '';
+            const serviceID = localStorage.getItem('emailjsServiceID') || '';
+            const templateID = localStorage.getItem('templateID') || '';
+            const forwardEmail = localStorage.getItem('forwardEmail') || 'muwanguziibra09@gmail.com';
+            
+            if (!publicKey || !serviceID || !templateID) {
+                statusDiv.style.display = 'block';
+                statusDiv.style.color = '#fbbf24';
+                statusDiv.style.background = '#fef3c7';
+                statusDiv.innerHTML = '⚠️ Email not configured. Please set up in admin panel.';
+                return;
+            }
+            
+            let preferredContact = document.getElementById('userPreferredContact').value;
+            if (preferredContact === 'Other') {
+                preferredContact = 'Other: ' + document.getElementById('userOtherContact').value;
+            }
+            
+            const templateParams = {
+                from_name: document.getElementById('userName').value,
+                from_email: document.getElementById('userEmail').value,
+                phone: document.getElementById('userPhone').value || 'Not provided',
+                gender: document.getElementById('userGender').value || 'Not provided',
+                address: document.getElementById('userAddress').value || 'Not provided',
+                reason: document.getElementById('userReason').value || 'Not provided',
+                preferred_contact: preferredContact,
+                message: document.getElementById('userMessage').value,
+                to_email: forwardEmail,
+                time: new Date().toLocaleString()
+            };
+            
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = '#38bdf8';
+            statusDiv.style.background = '#e0f2fe';
+            statusDiv.innerHTML = 'Sending...';
+            sendBtn.disabled = true;
+            sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            emailjs.init(publicKey);
+            emailjs.send(serviceID, templateID, templateParams)
+                .then(function() {
+                    statusDiv.style.color = '#22c55e';
+                    statusDiv.style.background = '#dcfce7';
+                    statusDiv.innerHTML = '✅ Message sent successfully! I will respond within 24 hours.';
+                    sendBtn.innerHTML = '✅ Sent!';
+                    document.getElementById('contactForm').reset();
+                    document.getElementById('userOtherContact').style.display = 'none';
+                    setTimeout(() => {
+                        sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                        sendBtn.disabled = false;
+                        statusDiv.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    statusDiv.style.color = '#ef4444';
+                    statusDiv.style.background = '#fee2e2';
+                    statusDiv.innerHTML = '❌ Failed to send. Please try again.';
+                    sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Try Again';
+                    sendBtn.disabled = false;
+                    console.error('EmailJS error:', error);
+                });
+        });
+    }
+
+    const emailInput = document.getElementById('userEmail');
+    if (emailInput) {
+        emailInput.addEventListener('input', function() {
+            const emailError = document.getElementById('emailError');
+            if (isValidEmail(this.value)) {
+                emailError.style.display = 'none';
+                this.style.borderColor = '#ddd';
+            }
+        });
+    }
+});
+
+// ============================================
+// STORAGE LISTENER
+// ============================================
+window.addEventListener('storage', function(e) {
+    if (e.key === 'portfolioData') {
+        setTimeout(function() {
+            loadPageData();
+            loadHeroBackground();
+            updateImages();
+        }, 100);
+    }
+    if (e.key === 'testimonials_table') {
+        renderTestimonials();
+    }
+    if (e.key === 'forwardEmail') {
+        const newEmail = e.newValue || 'muwanguziibra09@gmail.com';
+        const emailDisplay = document.getElementById('contactEmail');
+        if (emailDisplay) {
+            emailDisplay.textContent = newEmail;
+        }
+    }
+});
+
+window.toggleForm = toggleForm;
+</script>
+</body>
+</html>
